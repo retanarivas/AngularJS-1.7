@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="appFilter">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="filterController.js"></script>
+</head>
+<body ng-controller="filterController">
+{{ myHtml | htmlRemover }}
+</body>
+</html>

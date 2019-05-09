@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="applyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module("applyApp", [])
+            .controller("applyControler", function ($scope) {
+                $scope.nombre = "Angel";
+                setTimeout(function () {
+                    $scope.$apply( function () {
+                        $scope.nombre = "roy";
+                    });
+                },2000);
+            });
+    </script>
+</head>
+<body ng-controller="applyControler">
+    <h1>{{nombre}}</h1>
+</body>
+</html>

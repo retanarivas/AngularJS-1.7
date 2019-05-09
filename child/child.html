@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="childApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="childController.js"></script>
+</head>
+<body ng-controller="childController">
+    {{name}}
+    <p><strong>Valor del padre: </strong>{{$parent.name}}</p>
+    <div ng-controller="secondController">
+        <p><strong>valor del hijo: </strong>{{name}}</p>
+        <input type="text" ng-model="$parent.name">
+    </div>
+</body>
+</html>

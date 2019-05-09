@@ -1,0 +1,21 @@
+<!DOCTTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>TODO SERVICES</title>
+    <style>
+        .hover{
+         background-color: rgb(200,0,50);
+        }
+        .no-hover{
+            background-color: rgb(8, 251, 17);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body>
+    <button ng-click="bandera = !bandera" ng-class="{'hover': bandera, 'no-hover': !bandera}">click</button>
+    <span ng-show="bandera"> <-Click me</span>
+    <p>{{bandera | json}}</p>
+</body>
+</html>
